@@ -9,7 +9,7 @@ const MonthlyCard = () => {
     <CustomCard>
       <div className="">
         <div className="flex justify-between  text-center">
-          <h1 className="text-lg font-semibold cardText">Monthly Top Agents</h1>
+          <h1 className="text-lg font-semibold cardText">Agents Top du Mois</h1>
         </div>
         <Separator className="my-2" />
         {/* image */}

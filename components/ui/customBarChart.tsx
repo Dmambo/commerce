@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { TrendingUp } from "lucide-react"
-import { Bar, BarChart, XAxis, YAxis } from "recharts"
+import { TrendingUp } from "lucide-react";
+import { Bar, BarChart, XAxis, YAxis } from "recharts";
 
 import {
   Card,
@@ -10,15 +10,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart"
+} from "@/components/ui/chart";
 
-export const description = "A mixed bar chart"
+export const description = "Un graphique à barres mixte";
 
 const chartData = [
   { browser: "camayenne", Sales: 275, fill: "var(--color-camayenne)" },
@@ -26,11 +26,11 @@ const chartData = [
   { browser: "matoto", Sales: 187, fill: "var(--color-matoto)" },
   { browser: "kippe", Sales: 173, fill: "var(--color-kippe)" },
   { browser: "kaloum", Sales: 90, fill: "var(--color-kaloum)" },
-]
+];
 
 const chartConfig = {
   Sales: {
-    label: "Sales",
+    label: "Ventes",
   },
   camayenne: {
     label: "cmye",
@@ -52,14 +52,14 @@ const chartConfig = {
     label: "Kaloum",
     color: "hsl(var(--chart-5))",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export function Component() {
   return (
     <Card>
       <CardHeader>
         <CardTitle>Agence Commerciale</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardDescription>Données Mensuelles</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -92,12 +92,12 @@ export function Component() {
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
-          Sales Trend of each Commerciale <TrendingUp className="h-4 w-4" />
+          Tendance des Ventes de chaque Agence Commerciale <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
-          List of the Agence commerciale
+          Liste des Agences Commerciales
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

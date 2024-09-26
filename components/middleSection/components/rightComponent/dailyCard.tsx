@@ -10,7 +10,7 @@ const DailyCard = () => {
     <CustomCard>
       <div className="">
         <div className="flex justify-between  text-center">
-          <h1 className="text-lg font-semibold cardText">Yearly Top Agents</h1>
+          <h1 className="text-lg font-semibold cardText">Agents Top de l&apos;Année</h1>
         </div>
         <Separator className="my-2" />
         {/* image */}

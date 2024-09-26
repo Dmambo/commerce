@@ -1,6 +1,7 @@
 import AgentDay from "./agent/agentDay";
 import { ModeToggle } from "./ui/modeToggle";
 import { Separator } from "./ui/separator";
+
 const Nav = () => {
   return (
     <div>
@@ -8,7 +9,7 @@ const Nav = () => {
       <div>
         <div className="flex justify-between items-center">
           <div className="text-2xl font-extrabold py-2 dimYellow">
-            Sales Dashboard
+            Tableau de Bord des Ventes
           </div>
           <div>
             <ModeToggle />

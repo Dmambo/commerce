@@ -13,32 +13,32 @@ type DataType = {
 };
 
 const Sub = () => {
-  const [currentData, setCurrentData] = useState<DataType>(SubscriptionData); // Start with SubscriptionData
-  const dataSets = [SubscriptionData, ResidentialSubData, CorporateSubData, ProSubData]; // Array of all datasets
-  const dataTitles = ["Total Subscriptions", "Residential Subscriptions", "Corporate Subscriptions", "Pro Subscriptions"]; // Titles for each dataset
-  const [currentIndex, setCurrentIndex] = useState(0); // Keep track of the current dataset index
+  const [currentData, setCurrentData] = useState<DataType>(SubscriptionData); // Commencer avec SubscriptionData
+  const dataSets = [SubscriptionData, ResidentialSubData, CorporateSubData, ProSubData]; // Tableau de tous les ensembles de données
+  const dataTitles = ["Total des Abonnements", "Abonnements Résidentiels", "Abonnements Corporatifs", "Abonnements Pro"]; // Titres pour chaque ensemble de données
+  const [currentIndex, setCurrentIndex] = useState(0); // Suivre l'index de l'ensemble de données actuel
 
-  // Cycle through the data sets every 5 seconds
+  // Passer par les ensembles de données toutes les 10 secondes
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const newIndex = (currentIndex + 1) % dataSets.length; // Cycle through datasets
+      const newIndex = (currentIndex + 1) % dataSets.length; // Passer par les ensembles de données
       setCurrentIndex(newIndex);
-      setCurrentData(dataSets[newIndex]); // Update the current dataset
-      console.log(`Switched to dataset index: ${newIndex}`, dataSets[newIndex]); // Debugging: See if dataset changes
-    }, 10000); // 5000ms = 5 seconds
+      setCurrentData(dataSets[newIndex]); // Mettre à jour l'ensemble de données actuel
+      console.log(`Changement à l'index de l'ensemble de données : ${newIndex}`, dataSets[newIndex]); // Débogage : Voir si l'ensemble de données change
+    }, 10000); // 10000ms = 10 secondes
 
-    return () => clearInterval(intervalId); // Clear interval on unmount
-  }, [currentIndex]); // Dependency on currentIndex
+    return () => clearInterval(intervalId); // Effacer l'intervalle lors du démontage
+  }, [currentIndex]); // Dépendance sur currentIndex
 
-  // If no data is available, return a loading indicator
+  // Si aucune donnée n'est disponible, retourner un indicateur de chargement
   if (!currentData) {
-    return <p>Loading...</p>;
+    return <p>Chargement...</p>;
   }
 
   return (
     <div>
       <div>
-        <h3 className="font-bold text-2xl mb-4 redColor">{dataTitles[currentIndex]}</h3> {/* Dynamic Title */}
+        <h3 className="font-bold text-2xl mb-4 redColor">{dataTitles[currentIndex]}</h3> {/* Titre dynamique */}
       </div>
       <div className="max-w-sm mx-auto p-3 border border-zinc-300 rounded-3xl text-start shadow-lg w-full bg-#fd0d0d">
         {Object.keys(currentData).map((key) => (
@@ -53,8 +53,8 @@ const Sub = () => {
         ))}
       </div>
       <div className='my-2 animate-pulse'>
-        <p className="bloodRed font-extrabold">NB: <span>
-            <i>The data changes every 10 seconds</i></span></p>
+        <p className="bloodRed font-extrabold">NB : <span>
+            <i>Les données changent toutes les 10 secondes</i></span></p>
       </div>
     </div>
   );
