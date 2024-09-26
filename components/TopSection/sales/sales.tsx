@@ -36,11 +36,11 @@ const Sales = () => {
   return (
     <div>
       <div>
-        <h3 className="font-bold text-2xl mb-4 redColor">{dataTitles[currentIndex]}</h3> {/* Titre dynamique */}
+        <h3 className="font-bold text-xl mb-2 redColor">{dataTitles[currentIndex]}</h3> {/* Titre dynamique */}
       </div>
-      <div className="max-w-sm mx-auto p-3 border border-zinc-300 rounded-3xl text-start shadow-lg w-full bg-#fd0d0d">
+      <div className="max-w-sm mx-auto p-2 border border-zinc-300 rounded-3xl text-start shadow-lg w-full bg-#fd0d0d">
         {Object.keys(currentData).map((key) => (
-          <div key={key} className="mb-4 border-b">
+          <div key={key} className=" border-b">
             {currentData[key as keyof DataType].map((item, index) => (
               <div key={index} className="flex justify-between mb-2">
                 <span className="font-bold dimYellow mr-10">{item.title}: </span>

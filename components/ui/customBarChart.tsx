@@ -90,7 +90,7 @@ export function Component() {
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
+      <CardFooter className="flex-col items-start gap-2 text-xs">
         <div className="flex gap-2 font-medium leading-none">
           Tendance des Ventes de chaque Agence Commerciale <TrendingUp className="h-4 w-4" />
         </div>

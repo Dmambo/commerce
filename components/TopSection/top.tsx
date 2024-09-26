@@ -11,7 +11,7 @@ const TopSection = () => {
     <div>
       <Nav />
       <div className="flex border border-stone-400 shadow-xl rounded-lg">
-        <div className="flex gap-10 py-2 px-4 border-r border-stone-400">
+        <div className="flex gap-10 py-1 px-4 border-r border-stone-400">
           <div>
             <Sales />
           </div>
