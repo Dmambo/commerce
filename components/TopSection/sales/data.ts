@@ -1,25 +1,25 @@
 const Data = {
   Validated: [
     {
-      title: "Total Sales Validated",
+      title: "Total des Ventes Validées",
       Value: "5574515",
     },
   ],
   Turnover: [
     {
-      title: "Total Sales Turnover Validated",
+      title: "Total du Chiffre d'Affaires des Ventes Validées",
       Value: "5574515",
     },
   ],
   Quote: [
     {
-      title: "Total Quote Sent",
+      title: "Total des Devis Envoyés",
       Value: "5574515",
     },
   ],
   Total: [
     {
-      title: "Total Sales",
+      title: "Total des Ventes",
       Value: "5574515",
     },
   ],
@@ -28,25 +28,25 @@ const Data = {
 const ResidentialData = {
   Validated: [
     {
-      title: "Residential Sales Validated",
+      title: "Ventes Résidentielles Validées",
       Value: "4560",
     },
   ],
   Turnover: [
     {
-      title: "Residential Sales Turnover Validated",
+      title: "Chiffre d'Affaires des Ventes Résidentielles Validées",
       Value: "3420",
     },
   ],
   Quote: [
     {
-      title: "Residential Quote Sent",
+      title: "Devis Résidentiels Envoyés",
       Value: "74",
     },
   ],
   Total: [
     {
-      title: "Total Residential Sales",
+      title: "Total des Ventes Résidentielles",
       Value: "7451",
     },
   ],
@@ -55,25 +55,25 @@ const ResidentialData = {
 const CorporateData = {
   Validated: [
     {
-      title: "Coperate Sales Validated",
+      title: "Ventes Corporatives Validées",
       Value: "560",
     },
   ],
   Turnover: [
     {
-      title: "Coperate Sales Turnover Validated",
+      title: "Chiffre d'Affaires des Ventes Corporatives Validées",
       Value: "420",
     },
   ],
   Quote: [
     {
-      title: "Coperate Quote Sent",
+      title: "Devis Corporatifs Envoyés",
       Value: "45",
     },
   ],
   Total: [
     {
-      title: "Total Coperate Sales",
+      title: "Total des Ventes Corporatives",
       Value: "5574",
     },
   ],
@@ -82,25 +82,25 @@ const CorporateData = {
 const ProData = {
   Validated: [
     {
-      title: "Pro Sales Validated",
+      title: "Ventes Pro Validées",
       Value: "2560",
     },
   ],
   Turnover: [
     {
-      title: "Pro Sales Turnover Validated",
+      title: "Chiffre d'Affaires des Ventes Pro Validées",
       Value: "4200",
     },
   ],
   Quote: [
     {
-      title: "Pro Quote Sent",
+      title: "Devis Pro Envoyés",
       Value: "62",
     },
   ],
   Total: [
     {
-      title: "Total Pro Sales",
+      title: "Total des Ventes Pro",
       Value: "6574",
     },
   ],

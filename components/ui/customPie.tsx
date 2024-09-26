@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { TrendingUp } from "lucide-react"
-import { Label, Pie, PieChart } from "recharts"
+import * as React from "react";
+import { TrendingUp } from "lucide-react";
+import { Label, Pie, PieChart } from "recharts";
 
 import {
   Card,
@@ -11,15 +11,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart"
+} from "@/components/ui/chart";
 
-export const description = "Total Number of subscription"
+export const description = "Nombre total d'abonnements";
 
 const chartData = [
   { browser: "camayenne", visitors: 275, fill: "var(--color-camayenne)" },
@@ -27,11 +27,11 @@ const chartData = [
   { browser: "kippe", visitors: 287, fill: "var(--color-kippe)" },
   { browser: "matoto", visitors: 173, fill: "var(--color-matoto)" },
   { browser: "kaloum", visitors: 190, fill: "var(--color-kaloum)" },
-]
+];
 
 const chartConfig = {
   visitors: {
-    label: "Visitors",
+    label: "Visiteurs",
   },
   camayenne: {
     label: "camayenne",
@@ -53,18 +53,18 @@ const chartConfig = {
     label: "kaloum",
     color: "hsl(var(--chart-10))",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export function Component() {
   const totalVisitors = React.useMemo(() => {
-    return chartData.reduce((acc, curr) => acc + curr.visitors, 0)
-  }, [])
+    return chartData.reduce((acc, curr) => acc + curr.visitors, 0);
+  }, []);
 
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Total Number of subscription</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>Nombre total d'abonnements</CardTitle>
+        <CardDescription>Janvier - Juin 2024</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -105,10 +105,10 @@ export function Component() {
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Subscription
+                          Abonnements
                         </tspan>
                       </text>
-                    )
+                    );
                   }
                 }}
               />
@@ -118,10 +118,9 @@ export function Component() {
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
         <div className="flex items-center gap-2 font-medium leading-none">
-          Total increase in number of subscription <TrendingUp className="h-4 w-4" />
+          Augmentation totale du nombre d'abonnements <TrendingUp className="h-4 w-4" />
         </div>
-      
       </CardFooter>
     </Card>
-  )
+  );
 }
