@@ -1,9 +1,36 @@
 import React from "react";
 
-const CircularProgress = ({ size = 120, strokeWidth = 10, percentage = 0 }) => {
+interface CircularProgressProps {
+  size?: number;
+  strokeWidth?: number;
+  percentage?: number;
+  theme?: "light" | "dark"; // Add a theme prop
+}
+
+const CircularProgress: React.FC<CircularProgressProps> = ({
+  size = 30,
+  strokeWidth = 4,
+  percentage = 0,
+  theme = "light", // Default to light theme
+}) => {
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
+
+  // Determine stroke color based on percentage
+  const getStrokeColor = (percentage: number): string => {
+    if (percentage >= 80) {
+      return "#4caf50"; // Green for 80% and above
+    } else if (percentage >= 50) {
+      return "#ffeb3b"; // Yellow for 50% to 79%
+    } else {
+      return "#f44336"; // Red for below 50%
+    }
+  };
+
+  // Determine text color based on theme
+  const textColor = theme === "dark" ? "white" : "black";
+  const strokeColor = getStrokeColor(percentage); // Get the stroke color based on the percentage
 
   return (
     <svg
@@ -23,7 +50,7 @@ const CircularProgress = ({ size = 120, strokeWidth = 10, percentage = 0 }) => {
       />
       {/* Progress Circle */}
       <circle
-        stroke="#4caf50"
+        stroke={strokeColor} // Set stroke color based on percentage
         fill="transparent"
         strokeWidth={strokeWidth}
         strokeDasharray={circumference}
@@ -40,8 +67,8 @@ const CircularProgress = ({ size = 120, strokeWidth = 10, percentage = 0 }) => {
         y="50%"
         textAnchor="middle"
         dy=".3em"
-        fontSize="12"
-        fill="black"
+        fontSize="6"
+        fill={textColor} // Use the determined text color
       >
         {`${percentage}%`}
       </text>

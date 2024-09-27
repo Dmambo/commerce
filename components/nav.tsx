@@ -8,7 +8,7 @@ const Nav = () => {
       <AgentDay />
       <div>
         <div className="flex justify-between items-center">
-          <div className="text-2xl font-extrabold py-2 dimYellow">
+          <div className="text-xl font-extrabold py-2 dimYellow">
             Tableau de Bord des Ventes
           </div>
           <div>

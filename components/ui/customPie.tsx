@@ -96,7 +96,7 @@ export function Component() {
                         <tspan
                           x={viewBox.cx}
                           y={viewBox.cy}
-                          className="dimYellow text-3xl font-bold"
+                          className="fill-muted-foreground text-xl font-bold"
                         >
                           {totalVisitors.toLocaleString()}
                         </tspan>
@@ -116,7 +116,7 @@ export function Component() {
           </PieChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col gap-2 text-sm">
+      <CardFooter className="flex-col gap-2 text-xs">
         <div className="flex items-center gap-2 font-medium leading-none">
           Augmentation totale du nombre d'abonnements <TrendingUp className="h-4 w-4" />
         </div>

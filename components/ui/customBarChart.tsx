@@ -21,7 +21,7 @@ import {
 export const description = "Un graphique à barres mixte";
 
 const chartData = [
-  { browser: "camayenne", Sales: 275, fill: "var(--color-camayenne)" },
+  { browser: "camayenne", Sales: 320, fill: "var(--color-camayenne)" },
   { browser: "matam", Sales: 200, fill: "var(--color-matam)" },
   { browser: "matoto", Sales: 187, fill: "var(--color-matoto)" },
   { browser: "kippe", Sales: 173, fill: "var(--color-kippe)" },
@@ -56,7 +56,8 @@ const chartConfig = {
 
 export function Component() {
   return (
-    <Card>
+<Card>
+
       <CardHeader>
         <CardTitle>Agence Commerciale</CardTitle>
         <CardDescription>Données Mensuelles</CardDescription>
@@ -87,10 +88,11 @@ export function Component() {
               content={<ChartTooltipContent hideLabel />}
             />
             <Bar dataKey="Sales" layout="vertical" radius={5} />
+          
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
+      <CardFooter className="flex-col items-start gap-2 text-xs">
         <div className="flex gap-2 font-medium leading-none">
           Tendance des Ventes de chaque Agence Commerciale <TrendingUp className="h-4 w-4" />
         </div>

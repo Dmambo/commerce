@@ -61,7 +61,7 @@ const WeeklyCard = () => {
       <div>
         <div className="flex justify-between text-center">
           <h1 className="text-lg font-semibold cardText">
-          Agents Top de la Semaine
+            Agents Top de la Semaine
           </h1>
         </div>
         <Separator className="my-2" />

@@ -5,13 +5,15 @@ import Sub from "./subscription/sub";
 import Nav from "../nav";
 import { Component } from "../ui/customBarChart";
 import PieChart from "../middleSection/components/leftComponent/piechart";
+import BarDetails from "../barDetails";
+
 
 const TopSection = () => {
   return (
     <div>
       <Nav />
       <div className="flex border border-stone-400 shadow-xl rounded-lg">
-        <div className="flex gap-10 py-2 px-4 border-r border-stone-400">
+        <div className="flex gap-10 py-1 px-4 border-r border-stone-400">
           <div>
             <Sales />
           </div>
@@ -20,9 +22,10 @@ const TopSection = () => {
           </div>
         </div>
         <div className=" ">
-          <div className="flex justify-between gap-10">
+          <div className="flex">
             <Component />
-            <PieChart />
+            {/* <PieChart /> */}
+            <BarDetails />
           </div>
         </div>
       </div>
