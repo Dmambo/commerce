@@ -5,6 +5,8 @@ import Sub from "./subscription/sub";
 import Nav from "../nav";
 import { Component } from "../ui/customBarChart";
 import PieChart from "../middleSection/components/leftComponent/piechart";
+import BarDetails from "../barDetails";
+
 
 const TopSection = () => {
   return (
@@ -20,9 +22,10 @@ const TopSection = () => {
           </div>
         </div>
         <div className=" ">
-          <div className="flex justify-between gap-10">
+          <div className="flex">
             <Component />
-            <PieChart />
+            {/* <PieChart /> */}
+            <BarDetails />
           </div>
         </div>
       </div>

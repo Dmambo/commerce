@@ -96,7 +96,7 @@ export function Component() {
                         <tspan
                           x={viewBox.cx}
                           y={viewBox.cy}
-                          className="dimYellow text-xl font-bold"
+                          className="fill-muted-foreground text-xl font-bold"
                         >
                           {totalVisitors.toLocaleString()}
                         </tspan>
