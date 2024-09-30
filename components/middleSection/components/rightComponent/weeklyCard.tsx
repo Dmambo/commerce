@@ -24,7 +24,8 @@ const shuffleArray = (array: any[]) => {
   }));
 
   // Ensure the first item has the largest amount
-  shuffledArray[0].amount = Math.max(...shuffledArray.map((item) => item.amount)) + 1000; // Add an extra 1000 for the first item
+  shuffledArray[0].amount =
+    Math.max(...shuffledArray.map((item) => item.amount)) + 1000; // Add an extra 1000 for the first item
   return shuffledArray;
 };
 
@@ -65,19 +66,39 @@ const WeeklyCard = () => {
           </h1>
         </div>
         <Separator className="my-2" />
+        {/* Header row for titles */}
+        <div className="flex items-center justify-between mb-2">
+  <div className="w-[100px] text-left">
+    <p className="text-xs font-bold text-gray-500">Agent</p>
+  </div>
+  <div className="w-[0px] text-center">
+    <p className="text-xs font-bold text-gray-500">Montant</p>
+  </div>
+  <div className="w-[50px] text-center">
+    <p className="text-xs font-bold text-gray-500">Objectif</p>
+  </div>
+</div>
+
+        <Separator className="my-2" />
         <AnimatePresence>
           {/* image */}
           {shuffledData.map((item, index) => (
             <motion.div
               key={item.name}
-              className={`flex items-center space-x-4 justify-between my-2 border-b border-gray-200 ${index === 0 ? 'blink' : ''}`} // Apply blink class to the first item
+              className={`flex items-center space-x-4 justify-between my-2  ${
+                index === 0 ? "blink" : ""
+              } ${
+                index !== shuffledData.length - 1
+                  ? "border-b border-gray-200"
+                  : ""
+              }`} // Apply blink class to the first item
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.5 }}
             >
               {/* Profile Image */}
-              <div className="relative w-10 h-10 mb-2">
+              <div className="w-[40px] h-[40px] relative">
                 <Image
                   src={item.image}
                   layout="fill"
@@ -88,12 +109,8 @@ const WeeklyCard = () => {
               </div>
 
               {/* Name */}
-              <div className="flex-grow">
+              <div className="w-[130px] ml-2">
                 <p className="text-sm font-semibold cardText">{item.name}</p>
-              </div>
-
-              {/* Agency */}
-              <div className="text-center flex-grow">
                 <p className="text-xs text-gray-500">{item.agency}</p>
               </div>
 
@@ -101,8 +118,14 @@ const WeeklyCard = () => {
               <div className="border-l border-gray-200 h-8"></div>
 
               {/* Amount */}
-              <div className="text-sm text-gray-500 text-right">
-                <p>{item.amount}</p>
+              <div className="w-[60px] text-center">
+                <p className="text-sm text-gray-500">{item.amount}</p>
+              </div>
+              <div className="border-l border-gray-200 h-8"></div>
+
+              {/* Target */}
+              <div className="w-[60px] text-center">
+                <p className="text-sm text-gray-500">{item.target}</p>
               </div>
             </motion.div>
           ))}

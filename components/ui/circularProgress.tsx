@@ -8,7 +8,7 @@ interface CircularProgressProps {
 }
 
 const CircularProgress: React.FC<CircularProgressProps> = ({
-  size = 30,
+  size = 40,
   strokeWidth = 4,
   percentage = 0,
   theme = "light", // Default to light theme
@@ -67,7 +67,7 @@ const CircularProgress: React.FC<CircularProgressProps> = ({
         y="50%"
         textAnchor="middle"
         dy=".3em"
-        fontSize="6"
+        fontSize="8"
         fill={textColor} // Use the determined text color
       >
         {`${percentage}%`}
