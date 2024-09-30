@@ -28,7 +28,7 @@ const Sales = () => {
     const formatValue = (value: string) => {
       if (value.includes("GNF")) {
         const numberWithoutGNF = value.replace("GNF", "").trim(); // Remove "GNF" and trim whitespace
-        return <span className="text-red-500  font-bold flex">{numberWithoutGNF}</span>;
+        return <span className="text-green-500  font-bold flex">{numberWithoutGNF}</span>;
       }
       return value;
     };
@@ -50,7 +50,7 @@ const Sales = () => {
 
   return (
     <div>
-      <div className='flex justify-between items-center redColor'><h3 className="font-bold text-xl mb-2 ">{dataTitles[currentIndex]}</h3><p>GNF</p></div>
+      <div className='flex justify-between items-center redColor font-bold text-xl mb-2'><h3 className="font-bold text-xl mb-2 ">{dataTitles[currentIndex]}</h3><h3>GNF</h3></div>
       
       {/* Card for data with GNF */}
       <div className="max-w-sm mx-auto p-4 border border-zinc-300 rounded-3xl text-start shadow-lg w-full bg-white mb-4">
@@ -71,7 +71,7 @@ const Sales = () => {
             key={index} 
             className={`flex justify-between mb-2 ${index !== withoutGNF.length - 1 ? 'border-b border-zinc-300' : ''}`}>
             <span className=" font-bold text-gray-600 mr-10">{item.title}:</span>
-            <span>{item.Value}</span>
+            <span className=' text-green-500'>{item.Value}</span>
           </div>
         ))}
       </div>

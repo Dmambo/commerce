@@ -2,6 +2,7 @@ import MonthlyCard from "./monthlyCard";
 import WeeklyCard from "./weeklyCard";
 import DailyCard from './dailyCard';
 import SubCard from "@/components/ui/subCard";
+import BarDetails from "@/components/barDetails";
 
 const Right = () => {
   return (
@@ -9,7 +10,8 @@ const Right = () => {
       <WeeklyCard />
       <MonthlyCard />
       <DailyCard />
-      <SubCard />
+      {/* <SubCard /> */}
+      {/* <BarDetails /> */}
     </div>
   );
 };
