@@ -61,7 +61,7 @@ const WeeklyCard = () => {
       <style>{blinkAnimation}</style> {/* Inject the blink animation CSS */}
       <div>
         <div className="flex justify-between text-center">
-          <h1 className="text-lg font-semibold cardText">
+          <h1 className="text-lg font-semibold  cardText">
             Agents Top de la Semaine
           </h1>
         </div>
@@ -119,13 +119,13 @@ const WeeklyCard = () => {
 
               {/* Amount */}
               <div className="w-[60px] text-center">
-                <p className="text-sm text-gray-500">{item.amount}</p>
+                <p className="text-sm font-bold redColor">{item.amount}</p>
               </div>
               <div className="border-l border-gray-200 h-8"></div>
 
               {/* Target */}
               <div className="w-[60px] text-center">
-                <p className="text-sm text-gray-500">{item.target}</p>
+                <p className="text-sm font-bold redColor">{item.target}</p>
               </div>
             </motion.div>
           ))}

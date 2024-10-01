@@ -8,10 +8,10 @@ let SalesData = {
 
 // Handle POST request to add sales data
 export async function POST(request) {
-  const { type, title, value, category } = await request.json();
+  const { type, title, value, category,date } = await request.json();
 
   // Input validation
-  if (!type || !title || !value || !category) {
+  if (!type || !title || !value || !category || !date) {
     return new Response(JSON.stringify({ error: 'All fields are required' }), { status: 400 });
   }
 

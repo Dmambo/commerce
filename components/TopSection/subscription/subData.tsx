@@ -29,7 +29,7 @@ const ResidentialSubData = {
   Turnover: [
     {
       title: "Chiffre d'Affaires des Abonnements Résidentiels Validés",
-      Value: "3,420 GNF", // Added GNF
+      Value: "3420 GNF", // Added GNF
     },
   ],
   Total: [
@@ -50,7 +50,7 @@ const CorporateSubData = {
   Turnover: [
     {
       title: "Chiffre d'Affaires des Abonnements Corporatifs Validés",
-      Value: "3,420 GNF", // Added GNF
+      Value: "3420 GNF", // Added GNF
     },
   ],
   Total: [
@@ -71,7 +71,7 @@ const ProSubData = {
   Turnover: [
     {
       title: "Chiffre d'Affaires des Abonnements Pro Validés",
-      Value: "3,420 GNF", // Added GNF
+      Value: "3420 GNF", // Added GNF
     },
   ],
   Total: [

@@ -2,25 +2,25 @@ const Data = {
   Validated: [
     {
       title: "Total des Ventes Validées",
-      Value: "GNF 5,574,515 ",
+      Value: "GNF 5574515 ",
     },
   ],
   Turnover: [
     {
       title: "Total du Chiffre d'Affaires des Ventes Validées",
-      Value: "GNF 5,574,515 ",
+      Value: "GNF 5574515 ",
     },
   ],
   Quote: [
     {
       title: "Total des Devis Envoyés",
-      Value: "5,574,515",
+      Value: "5574515",
     },
   ],
   Total: [
     {
       title: "Total des Ventes",
-      Value: "5,574,515",
+      Value: "5574515",
     },
   ],
 };
@@ -29,13 +29,13 @@ const ResidentialData = {
   Validated: [
     {
       title: "Ventes Résidentielles Validées",
-      Value: "4,560",
+      Value: "4560",
     },
   ],
   Turnover: [
     {
       title: "Chiffre d'Affaires des Ventes Résidentielles Validées",
-      Value: "GNF 3,420",
+      Value: "GNF 3420",
     },
   ],
   Quote: [
@@ -47,7 +47,7 @@ const ResidentialData = {
   Total: [
     {
       title: "Total des Ventes Résidentielles",
-      Value: "7,451",
+      Value: "7451",
     },
   ],
 };
@@ -74,7 +74,7 @@ const CorporateData = {
   Total: [
     {
       title: "Total des Ventes Corporatives",
-      Value: "5,574",
+      Value: "5574",
     },
   ],
 };
@@ -83,13 +83,13 @@ const ProData = {
   Validated: [
     {
       title: "Ventes Pro Validées",
-      Value: "2,560",
+      Value: "2560",
     },
   ],
   Turnover: [
     {
       title: "Chiffre d'Affaires des Ventes Pro Validées",
-      Value: "GNF 4,200 ",
+      Value: "GNF 4200 ",
     },
   ],
   Quote: [
@@ -101,7 +101,7 @@ const ProData = {
   Total: [
     {
       title: "Total des Ventes Pro",
-      Value: "6,574",
+      Value: "6574",
     },
   ],
 };

@@ -21,11 +21,11 @@ import {
 export const description = "Un graphique à barres mixte";
 
 const chartData = [
-  { browser: "camayenne", Sales: 320, fill: "var(--color-camayenne)" },
-  { browser: "matam", Sales: 200, fill: "var(--color-matam)" },
-  { browser: "matoto", Sales: 187, fill: "var(--color-matoto)" },
-  { browser: "kippe", Sales: 173, fill: "var(--color-kippe)" },
-  { browser: "kaloum", Sales: 90, fill: "var(--color-kaloum)" },
+  { agency: "camayenne", Sales: 320, fill: "var(--color-camayenne)" },
+  { agency: "matam", Sales: 200, fill: "var(--color-matam)" },
+  { agency: "matoto", Sales: 187, fill: "var(--color-matoto)" },
+  { agency: "kippe", Sales: 173, fill: "var(--color-kippe)" },
+  { agency: "kaloum", Sales: 90, fill: "var(--color-kaloum)" },
 ];
 
 const chartConfig = {
@@ -34,24 +34,26 @@ const chartConfig = {
   },
   camayenne: {
     label: "cmye",
-    color: "hsl(var(--chart-1))",
-  },
-  matam: {
-    label: "Matam",
-    color: "hsl(var(--chart-2))",
-  },
-  matoto: {
-    label: "Matoto",
-    color: "hsl(var(--chart-3))",
-  },
-  kippe: {
-    label: "Kippe",
-    color: "hsl(var(--chart-4))",
+    color: "#f97316",
   },
   kaloum: {
     label: "Kaloum",
-    color: "hsl(var(--chart-5))",
+    color: "#f97316",
   },
+  matam: {
+    label: "Matam",
+    color: "#f97316",
+  },
+  matoto: {
+    label: "Matoto",
+    color: "#f97316",
+  },
+
+  kippe: {
+    label: "Kippe",
+    color: "#f97316",
+  },
+
 } satisfies ChartConfig;
 
 export function Component() {
@@ -73,7 +75,7 @@ export function Component() {
             }}
           >
             <YAxis
-              dataKey="browser"
+              dataKey="agency"
               type="category"
               tickLine={false}
               tickMargin={10}
