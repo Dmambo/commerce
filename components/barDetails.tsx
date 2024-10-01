@@ -49,7 +49,7 @@ const BarDetails: React.FC = () => {
                 <div className="font-bold text-green-500 flex items-center">
                   Goal: <span className="ml-4">{goal}</span>
                 </div>
-                <div className="font-bold text-red-500 flex items-center ml-4">
+                <div className="font-bold redColor flex items-center ml-4">
                   Current: <span className="ml-4">{current}</span>
                 </div>
               </div>

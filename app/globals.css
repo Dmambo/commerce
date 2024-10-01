@@ -90,7 +90,7 @@ body {
 }
 
 .redColor {
-  color: #fd0d0d;
+  color: #f97316;
 }
 
 .pinkColor {
@@ -102,11 +102,11 @@ body {
 }
 
 .dark  .dimYellow {
-  color: #cdc16f;
+  color: white;
 }
 
 .dimYellow {
-  color: #6b7280; /* Tailwind gray-500 or any custom gray */
+  color: black; /* Tailwind gray-500 or any custom gray */
 }
 
 .bloodRed {
@@ -114,19 +114,19 @@ body {
 }
 
 .agent {
-  color: red;
+  color: #f97316;
 }
 
-.dark .agent {
+/* .dark .agent {
   color: #cdc16f;;
-}
+} */
 
 .day{
-  color: gray;
+  color: black;
 }
 
 .dark .day {
-  color: red;
+  color: white;
 }
 
 .dark .bgBlack {
@@ -281,22 +281,22 @@ background-color: white;
 
 
 .camayenne {
-  color: #2662d9;
+  color: black;
 }
 
 .matam {
-color: #e23670;
+color: black;
 }
 
 .kippe {
-  color: #af57db;
+  color: black;
 }
 
 .kaloum {
-  color: #2eb88a;
+  color: black;
 }
 
 .matoto {
-  color: #e88c30;
+  color: black;
 
 }

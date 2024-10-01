@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { SubscriptionData, ResidentialSubData, CorporateSubData, ProSubData } from "./subData";
+import { AnimatedNumberBasic } from '@/components/ui/number';
 
 type DataType = {
   Validated: { title: string; Value: string }[];
@@ -31,7 +32,7 @@ const withoutGNF = Object.keys(currentData)
   const formatValue = (value: string) => {
     if (value.includes("GNF")) {
       const numberWithoutGNF = value.replace("GNF", "").trim(); // Remove "GNF" and trim whitespace
-      return <span className="text-green-500  font-bold flex">{numberWithoutGNF}</span>;
+      return <span className="text-orange-500  font-bold flex">{numberWithoutGNF}</span>;
     }
     return value;
   };
@@ -56,7 +57,7 @@ const withoutGNF = Object.keys(currentData)
 
   return (
     <div>
-      <div className='flex justify-between items-center redColor font-bold text-xl mb-2'><h3 className="font-bold text-xl mb-2 ">{dataTitles[currentIndex]}</h3><h3>GNF</h3></div>
+      <div className='flex justify-between items-center dimYellow font-bold text-xl mb-2'><h3 className="font-bold text-xl mb-2 ">{dataTitles[currentIndex]}</h3><h3>GNF</h3></div>
       
       {/* Card for data with GNF */}
       <div className="max-w-sm mx-auto p-4 border border-zinc-300 rounded-3xl text-start shadow-lg w-full bg-white mb-4">
@@ -65,7 +66,9 @@ const withoutGNF = Object.keys(currentData)
             key={index} 
             className={`flex justify-between mb-2 ${index !== withGNF.length - 1 ? 'border-b border-zinc-300' : ''}`}>
             <span className="font-bold text-gray-600 mr-10">{item.title}:</span>
-            <span>{formatValue(item.Value)}</span>
+            <span className="text-orange-500  font-bold flex">
+            <AnimatedNumberBasic value={parseFloat(item.Value.replace("GNF", "").trim())} />
+            </span>
           </div>
         ))}
       </div>
@@ -77,7 +80,9 @@ const withoutGNF = Object.keys(currentData)
             key={index} 
             className={`flex justify-between mb-2 ${index !== withoutGNF.length - 1 ? 'border-b border-zinc-300' : ''}`}>
             <span className=" font-bold text-gray-600 mr-10">{item.title}:</span>
-            <span className="text-green-500">{item.Value}</span>
+            <span className='font-bold flex text-orange-500'>
+              <AnimatedNumberBasic value={parseInt(item.Value)} />
+            </span>
           </div>
         ))}
       </div>
